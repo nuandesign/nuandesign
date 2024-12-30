@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>權譽產權金控中心 CHUAN YU PROPERTY RIGHTS F.C.C</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 固定右下角的返回頂端按鈕 */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 48px; /* 設定寬度 */
+      height: 48px; /* 設定高度，使其為圓形 */
+      background-color: #0000004a; /* 按鈕顏色 */
+      color: white;
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none; /* 預設隱藏 */
+      z-index: 1000; /* 確保按鈕在其他元素之上 */
+    }
+
+    #scrollToTop:hover {
+      background-color: #000000a6;
+    }
+
+    :root {
+      --primary: #1E3A8A;
+      --primary-light: #1b4d94;
+      --text-gray: #4B5563;
+    }
+
+    .text-primary {
+      color: var(--primary);
+    }
+
+    .bg-primary {
+      background-color: var(--primary);
+    }
+
+    .bg-light-blue {
+      background-color: #e3eaf1;
+    }
+
+    .bg-light-yellow {
+      background-color: #fff8d9;
+    }
+
+    .hover\:bg-primary-light:hover {
+      background-color: var(--primary-light);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <!-- Header -->
+  <div class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 p-4 h-28">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!-- 左側空間，讓 Logo 和按鈕不會被擠壓 -->
+      <div class="flex-1"></div>
+
+      <!-- Logo 居中 -->
+      <div class="flex justify-center flex-1">
+        <img src="img/logo.png" alt="Logo" class="h-20 w-auto object-contain max-w-full">
+      </div>
+
+      <!-- 按鈕保持在右側 -->
+      <div class="flex-1 flex justify-end">
+        <a href="#Contact-form">
+          <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-light">立即聯繫</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section 1 -->
+  <div class="max-w-6xl mx-auto py-16 px-6 bg-white pt-44">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-center mb-6 text-primary">一站式專業理債理財機制</h1>
+
+    <div class="flex flex-col lg:flex-row justify-between items-center text-center">
+      <!-- Left Side -->
+      <div class="space-y-4 flex-1 w-full lg:w-auto">
+        <div class="p-4 bg-light-blue shadow rounded">
+          <h2 class="font-bold text-xl text-primary">大數據ARP試算系統</h2>
+          <p>精準掌握利率</p>
+        </div>
+        <div class="p-4 bg-light-blue shadow rounded">
+          <h2 class="font-bold text-xl text-primary">人工智能內評調控模組</h2>
+          <p>精準高校標準</p>
+        </div>
+        <div class="p-4 bg-light-blue shadow rounded">
+          <h2 class="font-bold text-xl text-primary">遞減降息控管流程</h2>
+          <p>精準理債理財機制</p>
+        </div>
+      </div>
+
+      <!-- Right Side (圖片右側，會在手機版顯示在下方) -->
+      <div class="flex-1 flex justify-center items-center mt-6 lg:mt-0 lg:order-2 order-1">
+        <img src="img/chart.png" alt="Chart" class="h-96 w-auto object-contain">
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-6">
+      <a href="#Contact-form">
+      <button class="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary-light">
+        立即諮詢｜免費評估
+      </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="max-w-6xl mx-auto p-6 space-y-6">
+    <div class="max-w-6xl mx-auto text-center mb-20">
+      <!-- 標題區 -->
+      <h1 class="text-3xl font-bold text-center mb-6 text-primary">服務特色介紹</h1>
+      <p class="text-blue-500 text-xl">量身訂做的專業金融服務</p>
+    </div>
+
+    <!-- 第1組 -->
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div class="flex-1">
+        <img src="img/left-image1.png" alt="Left Image 1" class="w-full">
+      </div>
+      <div class="flex-1">
+        <img src="img/right-image1.png" alt="Right Image 1" class="w-full">
+      </div>
+    </div>
+
+    <!-- 第2組 -->
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div class="flex-1">
+        <img src="img/left-image2.png" alt="Left Image 2" class="w-full">
+      </div>
+      <div class="flex-1">
+        <img src="img/right-image2.png" alt="Right Image 2" class="w-full">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="bg-white py-12">
+    <!-- 標題區 -->
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-3xl font-bold text-center mb-6 text-primary">服務流程</h1>
+      <p class="text-blue-500 text-xl">簡單三步驟，快速核貸</p>
+    </div>
+
+    <!-- 三步驟區 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto px-4">
+      <!-- Step 1 -->
+      <div class="bg-white p-6 text-center">
+        <img src="img/step1.png" alt="Step 1" class="mx-auto h-56 mb-4">
+        <h3 class="text-2xl font-bold mb-2 mt-10">STEP.1 免費諮詢</h3>
+        <p class="text-gray-600">提供專業的房屋、土地、企業貸款規劃，量身打造最佳方案。</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-white p-6 text-center">
+        <img src="img/step2.png" alt="Step 2" class="mx-auto h-56 mb-4">
+        <h3 class="text-2xl font-bold mb-2 mt-10">STEP.2 專案審核</h3>
+        <p class="text-gray-600">根據您提供的資料，迅速完成貸款審核，保證核準準率。</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-white p-6 text-center">
+        <img src="img/step3.png" alt="Step 3" class="mx-auto h-56 mb-4">
+        <h3 class="text-2xl font-bold mb-2 mt-10">STEP.3 資金撥款</h3>
+        <p class="text-gray-600">通過後快速撥款，助您解決資金需求。</p>
+      </div>
+    </div>
+  </div>
+  <!-- Section 4 Form -->
+  <div id="Contact-form" class="bg-light-blue py-16">
+    <div class="max-w-6xl mx-auto p-6 flex flex-col lg:flex-row items-center gap-12">
+      <!-- 左側區域 -->
+      <div class="flex-1">
+        <img src="img/consult-image.png" alt="Consultation" class="w-full max-w-md mx-auto">
+      </div>
+
+      <!-- 右側表單區域 -->
+      <div class="flex-1 bg-white shadow-lg rounded-xl p-8 relative w-full lg:max-w-lg"
+        style="background-image: url(''); background-size: cover; background-position: center;">
+        <h1 class="text-3xl font-bold text-primary mb-6 text-center">預約專屬服務</h1>
+        <form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
+          <!-- 姓名 -->
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+            <input type="text" id="name" name="entry.NAME_FIELD_ID" placeholder="例如：陳先生 or 張小姐"
+              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <!-- LINE ID -->
+          <div class="mb-4">
+            <label for="line" class="block text-gray-700 font-medium mb-2">LINE ID</label>
+            <input type="text" id="line" name="entry.LINE_FIELD_ID" placeholder="LINE ID"
+              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <!-- 手機號碼 -->
+          <div class="mb-4">
+            <label for="phone" class="block text-gray-700 font-medium mb-2">手機號碼</label>
+            <input type="tel" id="phone" name="entry.PHONE_FIELD_ID" placeholder="例如：0900123456"
+              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <!-- 四組下拉選單 -->
+          <!-- 資金需求 -->
+          <div class="mb-4">
+            <label for="amount" class="block text-gray-700 font-medium mb-2">資金需求</label>
+            <div class="relative">
+              <select id="amount" name="entry.AMOUNT_FIELD_ID"
+                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+                <option value="">選擇您的資金需求</option>
+                <option value="50萬以下">50萬以下</option>
+                <option value="50萬-100萬">50萬-100萬</option>
+                <option value="100萬以上">100萬以上</option>
+              </select>
+              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- 諮詢項目 -->
+          <div class="mb-4">
+            <label for="item" class="block text-gray-700 font-medium mb-2">諮詢項目</label>
+            <div class="relative">
+              <select id="item" name="entry.ITEM_FIELD_ID"
+                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+                <option value="">選擇諮詢項目</option>
+                <option value="二胎房貸">二胎房貸</option>
+                <option value="信貸">信貸</option>
+                <option value="其他">其他</option>
+              </select>
+              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- 聯絡時間 -->
+          <div class="mb-4">
+            <label for="time" class="block text-gray-700 font-medium mb-2">聯絡時間</label>
+            <div class="relative">
+              <select id="time" name="entry.TIME_FIELD_ID"
+                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+                <option value="">選擇聯絡時間</option>
+                <option value="全時段">全時段</option>
+                <option value="上午">上午</option>
+                <option value="下午">下午</option>
+              </select>
+              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- 所在縣市 -->
+          <div class="mb-4">
+            <label for="city" class="block text-gray-700 font-medium mb-2">所在縣市</label>
+            <div class="relative">
+              <select id="city" name="entry.CITY_FIELD_ID"
+                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+                <option value="">選擇所在縣市</option>
+                <option value="台北市">台北市</option>
+                <option value="新北市">新北市</option>
+                <option value="其他">其他</option>
+              </select>
+              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- 額外輸入框 -->
+          <div class="mb-4">
+            <label for="license" class="block text-gray-700 font-medium mb-2">車牌號碼</label>
+            <input type="text" id="license" name="entry.LICENSE_FIELD_ID" placeholder="例如：ABC-0000"
+              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <!-- 送出按鈕 -->
+          <div class="mt-6">
+            <button type="submit" class="w-full bg-red-500 text-white py-3 rounded font-bold hover:bg-red-600">
+              送出表單
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Section 5: 實際案例-->
+  <div class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- 標題區 -->
+      <div class="max-w-6xl mx-auto text-center mb-20">
+        <h1 class="text-3xl font-bold text-center mb-6 text-primary">實際案例</h1>
+        <p class="text-blue-500 text-xl">成功幫助數百位客戶重獲財務自由</p>
+      </div>
+
+      <!-- 案例內容 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- 左側：圖片上，文字下 -->
+        <div class="flex flex-col items-center text-center">
+          <img src="img/case-image1.png" alt="Case Image 1" class="w-full max-w-sm mb-6">
+          <p class="text-gray-700 leading-relaxed">
+            某企業主成功轉增貸銀行，獲得高額貸款，利率降至 1.78%，成功解除資金周轉壓力。
+          </p>
+        </div>
+
+        <!-- 右側：文字上，圖片下 -->
+        <div class="flex flex-col items-center text-center">
+          <p class="text-gray-700 leading-relaxed mb-6">
+            某房產持有人透過本公司進行二胎貸款整合，高額債務得到有效減免，月繳款顯著降低。
+          </p>
+          <img src="img/case-image2.png" alt="Case Image 2" class="w-full max-w-sm">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section 6: 客戶推薦 -->
+  <div class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- 標題區 -->
+      <div class="max-w-6xl mx-auto text-center mb-20">
+        <h1 class="text-3xl font-bold text-center mb-6 text-primary">客戶推薦</h1>
+        <p class="text-blue-500 text-xl">來自客戶的滿意回饋</p>
+      </div>
+
+      <!-- 內容區 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- 左欄：圖片 -->
+        <div class="flex justify-center">
+          <img src="img/customer-feedback-image.png" alt="Customer Feedback" class="w-full max-w-md">
+        </div>
+
+        <!-- 右欄：推薦內容 -->
+        <div class="space-y-8">
+          <!-- 第1條推薦 -->
+          <div class="flex items-start gap-4">
+            <img src="img/avatar1.png" alt="Avatar 1" class="w-32 h-32 rounded-full">
+            <div>
+              <h3 class="text-primary font-bold text-xl">「權譽匯銀資商金控幫助我度過資金危機！」</h3>
+              <p class="text-gray-700 text-sm">
+                我原本因為債務問題，貸款申請總是被拒。經過他們的專業評估和規劃，我順利取得高成數貸款，不僅解決了眼前的財務問題，還大幅降低了月付金額，我現在輕鬆還款，真的非常感謝！
+                <br>— 張先生，中小企業負責人
+              </p>
+            </div>
+          </div>
+
+          <!-- 第2條推薦 -->
+          <div class="flex items-start gap-4">
+            <img src="img/avatar2.png" alt="Avatar 2" class="w-32 h-32 rounded-full">
+            <div>
+              <h3 class="text-primary font-bold text-xl">「快速、高效，真正為客戶著想的貸款專家！」</h3>
+              <p class="text-gray-700 text-sm">
+                我的公司資金周轉困難，透過權譽匯銀商金控，我們在短時間內拿到了800萬元貸款，利率遠比市場低很多，幫我們公司度過了難關。我會推薦給所有有資金需求的人！
+                <br>— 王小姐，企業主
+              </p>
+            </div>
+          </div>
+
+          <!-- 第3條推薦 -->
+          <div class="flex items-start gap-4">
+            <img src="img/avatar3.png" alt="Avatar 3" class="w-32 h-32 rounded-full">
+            <div>
+              <h3 class="text-primary font-bold text-xl">「專業的團隊讓我感受到前所未有的安心感。」</h3>
+              <p class="text-gray-700 text-sm">
+                我有幾筆房地產的債務還是無法償合，月付款金額壓力非常大。權譽匯銀資商金控幫我規劃了債務整合方案，降低了我的利率和還款額，現在每月的負擔輕鬆了不少，我終於可以好好規劃我的財務了！
+                <br>— 劉先生，房地產持有人
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section 7: 聯繫我們 -->
+  <div class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- 左欄 -->
+        <div class="relative bg-light-yellow p-8 rounded-lg">
+          <div>
+            <h1 class="text-3xl font-bold mb-6 text-primary">立即聯繫</h1>
+            <p class="text-blue-500">為您量身打造的貸款解決方案</p>
+            <br>
+            <p class="text-gray-700 mb-6">
+              不管您是否擁有高額債務，或是需要更好的利率，權譽匯銀資商金控都能為您提供專業的金融規劃服務。
+            </p>
+            <!-- 按鈕 -->
+            <a href="#Contact-form">
+            <button class="bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:bg-blue-600">
+              立即諮詢｜免費評估
+            </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- 右欄 -->
+        <div class="flex justify-center">
+          <img src="img/contact-illustration.png" alt="Contact Illustration" class="w-full max-w-md">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section 8: 常見問題 Q&A -->
+  <div class="bg-light-blue py-16">
+    <div class="max-w-6xl mx-auto px-6"> <!-- 加入 px-6 來確保左右邊距一致 -->
+      <!-- 標題區 -->
+      <div class="max-w-6xl mx-auto text-center mb-20">
+        <h1 class="text-3xl font-bold text-center mb-6 text-primary">常見問題 Q&A</h1>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- 左側圖像 -->
+        <div class="flex justify-center">
+          <img src="img/faq-illustration.png" alt="FAQ Illustration" class="w-full max-w-sm">
+        </div>
+
+        <!-- 右側問答區 -->
+        <div class="bg-white shadow-lg rounded-lg p-6 space-y-4">
+          <!-- 問題1 -->
+          <div class="border border-gray-300 rounded-lg">
+            <button
+              class="w-full text-left px-4 py-3 flex items-center justify-between text-primary font-bold text-lg focus:outline-none">
+              1. 為什麼天氣那麼冷？
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="hidden px-4 py-2 text-gray-600">
+              天氣冷的原因可能是因為冷鋒來襲，或是大氣壓力的變化導致溫度降低。
+            </div>
+          </div>
+
+          <!-- 問題2 -->
+          <div class="border border-gray-300 rounded-lg">
+            <button
+              class="w-full text-left px-4 py-3 flex items-center justify-between text-primary font-bold text-lg focus:outline-none">
+              2. 為什麼天氣那麼冷？
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="hidden px-4 py-2 text-gray-600">
+              天氣冷的原因可能是因為冷鋒來襲，或是大氣壓力的變化導致溫度降低。
+            </div>
+          </div>
+
+          <!-- 問題3 -->
+          <div class="border border-gray-300 rounded-lg">
+            <button
+              class="w-full text-left px-4 py-3 flex items-center justify-between text-primary font-bold text-lg focus:outline-none">
+              3. 為什麼天氣那麼冷？
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="hidden px-4 py-2 text-gray-600">
+              天氣冷的原因可能是因為冷鋒來襲，或是大氣壓力的變化導致溫度降低。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center font-normal">
+    <p>&copy; 2024 權譽產權金控中心 CHUAN YU PROPERTY RIGHTS F.C.C 版權所有。</p>
+  </footer>
+<!-- 返回頂端按鈕 -->
+<button id="scrollToTop" class="text-center">
+  <!-- 使用 Heroicons 箭頭向上圖標 -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
+  </svg>
+</button>
+
+<script>
+  // 監聽滾動事件
+  window.onscroll = function() {
+    let scrollToTopButton = document.getElementById("scrollToTop");
+    // 當頁面滾動超過 300px 時顯示按鈕
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollToTopButton.style.display = "block"; // 顯示按鈕
+    } else {
+      scrollToTopButton.style.display = "none"; // 隱藏按鈕
+    }
+  };
+
+  // 點擊返回頂端按鈕
+  document.getElementById("scrollToTop").onclick = function() {
+    // 滾動回頂端
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // 平滑滾動
+    });
+  };
+</script>
+
+  <!-- JavaScript -->
+  <script>
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
