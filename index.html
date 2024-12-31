@@ -5,23 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>權譽產權金控中心 CHUAN YU PROPERTY RIGHTS F.C.C</title>
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Meta 描述 -->
+  <meta name="description" content="權譽產權金控中心專注於理債理財服務，提供大數據試算、人工智能調控，為客戶量身訂做最佳金融方案，實現財務自由。">
+  <!-- 關鍵字（可選） -->
+  <meta name="keywords" content="權譽產權, 金控, 理財, 理債, 金融方案">
+  <!-- Script -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico">
   <style>
     /* 固定右下角的返回頂端按鈕 */
     #scrollToTop {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 48px; /* 設定寬度 */
-      height: 48px; /* 設定高度，使其為圓形 */
-      background-color: #0000004a; /* 按鈕顏色 */
+      width: 48px;
+      /* 設定寬度 */
+      height: 48px;
+      /* 設定高度，使其為圓形 */
+      background-color: #0000004a;
+      /* 按鈕顏色 */
       color: white;
       border-radius: 50%;
       padding: 10px;
       font-size: 24px;
       cursor: pointer;
-      display: none; /* 預設隱藏 */
-      z-index: 1000; /* 確保按鈕在其他元素之上 */
+      display: none;
+      /* 預設隱藏 */
+      z-index: 1000;
+      /* 確保按鈕在其他元素之上 */
     }
 
     #scrollToTop:hover {
@@ -59,23 +73,24 @@
 <body class="bg-white">
   <!-- Header -->
   <div class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 p-4 h-28">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <!-- 左側空間，讓 Logo 和按鈕不會被擠壓 -->
-      <div class="flex-1"></div>
+    <div class="max-w-6xl mx-auto flex items-center">
+      <!-- 左側空間（用於對齊） -->
+      <div class="hidden sm:flex flex-1"></div>
 
-      <!-- Logo 居中 -->
-      <div class="flex justify-center flex-1">
+      <!-- Logo -->
+      <div class="flex sm:flex-1 justify-center sm:justify-center">
         <img src="img/logo.png" alt="Logo" class="h-20 w-auto object-contain max-w-full">
       </div>
 
-      <!-- 按鈕保持在右側 -->
-      <div class="flex-1 flex justify-end">
+      <!-- 按鈕 -->
+      <div class="flex flex-1 justify-end">
         <a href="#Contact-form">
           <button class="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-light">立即聯繫</button>
         </a>
       </div>
     </div>
   </div>
+
 
 
   <!-- Section 1 -->
@@ -109,9 +124,9 @@
     <!-- Button -->
     <div class="text-center mt-6">
       <a href="#Contact-form">
-      <button class="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary-light">
-        立即諮詢｜免費評估
-      </button>
+        <button class="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary-light">
+          立即諮詢｜免費評估
+        </button>
       </a>
     </div>
   </div>
@@ -410,9 +425,9 @@
             </p>
             <!-- 按鈕 -->
             <a href="#Contact-form">
-            <button class="bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:bg-blue-600">
-              立即諮詢｜免費評估
-            </button>
+              <button class="bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:bg-blue-600">
+                立即諮詢｜免費評估
+              </button>
             </a>
           </div>
         </div>
@@ -493,35 +508,35 @@
   <footer class="bg-gray-800 text-white py-4 text-center font-normal">
     <p>&copy; 2024 權譽產權金控中心 CHUAN YU PROPERTY RIGHTS F.C.C 版權所有。</p>
   </footer>
-<!-- 返回頂端按鈕 -->
-<button id="scrollToTop" class="text-center">
-  <!-- 使用 Heroicons 箭頭向上圖標 -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
-  </svg>
-</button>
+  <!-- 返回頂端按鈕 -->
+  <button id="scrollToTop" class="text-center">
+    <!-- 使用 Heroicons 箭頭向上圖標 -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
+    </svg>
+  </button>
 
-<script>
-  // 監聽滾動事件
-  window.onscroll = function() {
-    let scrollToTopButton = document.getElementById("scrollToTop");
-    // 當頁面滾動超過 300px 時顯示按鈕
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      scrollToTopButton.style.display = "block"; // 顯示按鈕
-    } else {
-      scrollToTopButton.style.display = "none"; // 隱藏按鈕
-    }
-  };
+  <script>
+    // 監聽滾動事件
+    window.onscroll = function () {
+      let scrollToTopButton = document.getElementById("scrollToTop");
+      // 當頁面滾動超過 300px 時顯示按鈕
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopButton.style.display = "block"; // 顯示按鈕
+      } else {
+        scrollToTopButton.style.display = "none"; // 隱藏按鈕
+      }
+    };
 
-  // 點擊返回頂端按鈕
-  document.getElementById("scrollToTop").onclick = function() {
-    // 滾動回頂端
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // 平滑滾動
-    });
-  };
-</script>
+    // 點擊返回頂端按鈕
+    document.getElementById("scrollToTop").onclick = function () {
+      // 滾動回頂端
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滾動
+      });
+    };
+  </script>
 
   <!-- JavaScript -->
   <script>
