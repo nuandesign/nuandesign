@@ -193,137 +193,136 @@
     </div>
   </div>
   <!-- Section 4 Form -->
-  <div id="Contact-form" class="bg-light-blue py-16">
-    <div class="max-w-6xl mx-auto p-6 flex flex-col lg:flex-row items-center gap-12">
-      <!-- 左側區域 -->
-      <div class="flex-1">
-        <img src="img/consult-image.png" alt="Consultation" class="w-full max-w-md mx-auto">
-      </div>
+<div id="Contact-form" class="bg-light-blue py-16">
+  <div class="max-w-6xl mx-auto p-6 flex flex-col lg:flex-row items-center gap-12">
+    <!-- 左側區域 -->
+    <div class="flex-1">
+      <img src="img/consult-image.png" alt="Consultation" class="w-full max-w-md mx-auto">
+    </div>
 
-      <!-- 右側表單區域 -->
-      <div class="flex-1 bg-white shadow-lg rounded-xl p-8 relative w-full lg:max-w-lg"
-        style="background-image: url(''); background-size: cover; background-position: center;">
-        <h1 class="text-3xl font-bold text-primary mb-6 text-center">預約專屬服務</h1>
-        <form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
-          <!-- 姓名 -->
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
-            <input type="text" id="name" name="entry.NAME_FIELD_ID" placeholder="例如：陳先生 or 張小姐"
-              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
-          </div>
+    <!-- 右側表單區域 -->
+    <div class="flex-1 bg-white shadow-lg rounded-xl p-8 relative w-full lg:max-w-lg">
+      <h1 class="text-3xl font-bold text-primary mb-6 text-center">預約專屬服務</h1>
+      <form id="customForm">
+        <!-- 姓名 -->
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+          <input type="text" id="name" name="entry.683514977" placeholder="例如：陳先生 or 張小姐"
+            class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+        </div>
 
-          <!-- LINE ID -->
-          <div class="mb-4">
-            <label for="line" class="block text-gray-700 font-medium mb-2">LINE ID</label>
-            <input type="text" id="line" name="entry.LINE_FIELD_ID" placeholder="LINE ID"
-              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
-          </div>
+        <!-- LINE ID -->
+        <div class="mb-4">
+          <label for="line" class="block text-gray-700 font-medium mb-2">LINE ID</label>
+          <input type="text" id="line" name="entry.1755612660" placeholder="LINE ID"
+            class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+        </div>
 
-          <!-- 手機號碼 -->
-          <div class="mb-4">
-            <label for="phone" class="block text-gray-700 font-medium mb-2">手機號碼</label>
-            <input type="tel" id="phone" name="entry.PHONE_FIELD_ID" placeholder="例如：0900123456"
-              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
-          </div>
+        <!-- 手機號碼 -->
+        <div class="mb-4">
+          <label for="phone" class="block text-gray-700 font-medium mb-2">手機號碼</label>
+          <input type="tel" id="phone" name="entry.1680428426" placeholder="例如：0900123456"
+            class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+        </div>
 
-          <!-- 四組下拉選單 -->
-          <!-- 資金需求 -->
-          <div class="mb-4">
-            <label for="amount" class="block text-gray-700 font-medium mb-2">資金需求</label>
-            <div class="relative">
-              <select id="amount" name="entry.AMOUNT_FIELD_ID"
-                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
-                <option value="">選擇您的資金需求</option>
-                <option value="50萬以下">50萬以下</option>
-                <option value="50萬-100萬">50萬-100萬</option>
-                <option value="100萬以上">100萬以上</option>
-              </select>
-              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </div>
-          </div>
+        <!-- 資金需求 -->
+        <div class="mb-4">
+          <label for="amount" class="block text-gray-700 font-medium mb-2">資金需求</label>
+          <select id="amount" name="entry.609211733" class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+            <option value="">選擇您的資金需求</option>
+            <option value="50萬以下">50萬以下</option>
+            <option value="50萬-100萬">50萬-100萬</option>
+            <option value="100萬以上">100萬以上</option>
+          </select>
+        </div>
 
-          <!-- 諮詢項目 -->
-          <div class="mb-4">
-            <label for="item" class="block text-gray-700 font-medium mb-2">諮詢項目</label>
-            <div class="relative">
-              <select id="item" name="entry.ITEM_FIELD_ID"
-                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
-                <option value="">選擇諮詢項目</option>
-                <option value="二胎房貸">二胎房貸</option>
-                <option value="信貸">信貸</option>
-                <option value="其他">其他</option>
-              </select>
-              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </div>
-          </div>
+        <!-- 諮詢項目 -->
+        <div class="mb-4">
+          <label for="item" class="block text-gray-700 font-medium mb-2">諮詢項目</label>
+          <select id="item" name="entry.141163426" class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+            <option value="">選擇諮詢項目</option>
+            <option value="二胎房貸">二胎房貸</option>
+            <option value="信貸">信貸</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
 
-          <!-- 聯絡時間 -->
-          <div class="mb-4">
-            <label for="time" class="block text-gray-700 font-medium mb-2">聯絡時間</label>
-            <div class="relative">
-              <select id="time" name="entry.TIME_FIELD_ID"
-                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
-                <option value="">選擇聯絡時間</option>
-                <option value="全時段">全時段</option>
-                <option value="上午">上午</option>
-                <option value="下午">下午</option>
-              </select>
-              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </div>
-          </div>
+        <!-- 聯絡時間 -->
+        <div class="mb-4">
+          <label for="time" class="block text-gray-700 font-medium mb-2">聯絡時間</label>
+          <select id="time" name="entry.1015862865" class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+            <option value="">選擇聯絡時間</option>
+            <option value="全時段">全時段</option>
+            <option value="上午">上午</option>
+            <option value="下午">下午</option>
+          </select>
+        </div>
 
-          <!-- 所在縣市 -->
-          <div class="mb-4">
-            <label for="city" class="block text-gray-700 font-medium mb-2">所在縣市</label>
-            <div class="relative">
-              <select id="city" name="entry.CITY_FIELD_ID"
-                class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
-                <option value="">選擇所在縣市</option>
-                <option value="台北市">台北市</option>
-                <option value="新北市">新北市</option>
-                <option value="其他">其他</option>
-              </select>
-              <span class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </div>
-          </div>
+        <!-- 所在縣市 -->
+        <div class="mb-4">
+          <label for="city" class="block text-gray-700 font-medium mb-2">所在縣市</label>
+          <select id="city" name="entry.1890374547" class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" required>
+            <option value="">選擇所在縣市</option>
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
 
-          <!-- 額外輸入框 -->
-          <div class="mb-4">
-            <label for="license" class="block text-gray-700 font-medium mb-2">車牌號碼</label>
-            <input type="text" id="license" name="entry.LICENSE_FIELD_ID" placeholder="例如：ABC-0000"
-              class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
-          </div>
+        <!-- 額外輸入框 -->
+        <div class="mb-4">
+          <label for="license" class="block text-gray-700 font-medium mb-2">車牌號碼</label>
+          <input type="text" id="license" name="entry.1405875653" placeholder="例如：ABC-0000"
+            class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
+        </div>
 
-          <!-- 送出按鈕 -->
-          <div class="mt-6">
-            <button type="submit" class="w-full bg-red-500 text-white py-3 rounded font-bold hover:bg-red-600">
-              送出表單
-            </button>
-          </div>
-        </form>
+        <!-- 送出按鈕 -->
+        <div class="mt-6">
+          <button type="submit" class="w-full bg-red-500 text-white py-3 rounded font-bold hover:bg-red-600">
+            送出表單
+          </button>
+        </div>
+      </form>
+
+      <!-- 感謝訊息 -->
+      <div id="thankYouMessage" style="display: none;" class="text-center text-green-500 font-bold mt-6">
+        感謝您的提交！我們已收到您的資訊。
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  const form = document.getElementById('customForm');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault(); // 阻止表單預設提交行為
+
+    // 獲取表單數據
+    const formData = new FormData(form);
+
+    // 提交到 Google 表單
+    const googleFormAction = "https://docs.google.com/forms/d/e/1FAIpQLSd9J_cPmNEMyJMjJlVaad8_hfMqhxfZT4gwsbIustXFPKHSEw/formResponse";
+
+    try {
+      // 使用 fetch 提交表單數據
+      await fetch(googleFormAction, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors" // 必須使用 no-cors 來繞過跨域限制
+      });
+
+      // 顯示感謝訊息並清空表單
+      form.reset(); // 清空表單
+      thankYouMessage.style.display = "block"; // 顯示感謝訊息
+    } catch (error) {
+      console.error("提交表單時發生錯誤：", error);
+    }
+  });
+</script>
+
+  
   <!-- Section 5: 實際案例-->
   <div class="bg-white py-16">
     <div class="max-w-6xl mx-auto px-6">
