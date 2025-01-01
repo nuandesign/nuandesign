@@ -260,17 +260,6 @@
             </select>
           </div>
 
-          <!-- 所在縣市 -->
-          <div class="mb-4">
-            <label for="city" class="block text-gray-700 font-medium mb-2">所在縣市</label>
-            <select id="city" class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
-              <option value="" disabled selected>選擇所在縣市</option>
-              <option value="台北市">台北市</option>
-              <option value="新北市">新北市</option>
-              <option value="其他">其他</option>
-            </select>
-          </div>
-
           <!-- 車牌號碼 -->
           <div class="mb-4">
             <label for="license" class="block text-gray-700 font-medium mb-2">車牌號碼</label>
@@ -295,58 +284,51 @@
   </div>
 
   <script>
-    document.getElementById('submit-button').addEventListener('click', async (e) => {
-      e.preventDefault(); // 防止表單預設行為
-      console.log("按鈕點擊事件已觸發"); // 測試按鈕是否正常綁定
-    });
+    // 確保按鈕事件僅綁定一次
+    const button = document.getElementById('submit-button');
+    if (!button) {
+      console.error("按鈕不存在");
+    } else {
+      button.addEventListener('click', async (e) => {
+        e.preventDefault(); // 阻止表單預設行為
+        console.log("按鈕點擊事件已觸發");
 
-    document.getElementById('submit-button').addEventListener('click', async (e) => {
-      e.preventDefault(); // 防止預設行為
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw_eEP3ASghXdaZpfBTsgUYBt4MAWPTx06iBj_jIcMkV2LbCik7hiqxtC4awY4RTESllQ/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbw_eEP3ASghXdaZpfBTsgUYBt4MAWPTx06iBj_jIcMkV2LbCik7hiqxtC4awY4RTESllQ/exec";
 
-      // 收集表單資料
-      const data = {
-        name: document.getElementById('name').value,
-        line: document.getElementById('line').value,
-        phone: document.getElementById('phone').value,
-        amount: document.getElementById('amount').value,
-        item: document.getElementById('item').value,
-        time: document.getElementById('time').value,
-        city: document.getElementById('city').value,
-        license: document.getElementById('license').value,
-      };
+        // 收集表單資料
+        const data = {
+          name: document.getElementById('name').value,
+          line: document.getElementById('line').value,
+          phone: document.getElementById('phone').value,
+          amount: document.getElementById('amount').value,
+          item: document.getElementById('item').value,
+          time: document.getElementById('time').value,
+          city: document.getElementById('city').value,
+          license: document.getElementById('license').value,
+        };
 
-      try {
-        // 發送表單資料到 Google Apps Script
-        const response = await fetch(scriptURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-        // 確認按鈕存在並綁定事件
-        const button = document.getElementById('submit-button');
-        if (!button) {
-          console.error("按鈕不存在");
-          return;
-        }
-
-        // 綁定按鈕事件
-        button.addEventListener('click', async (e) => {
-          e.preventDefault(); // 阻止表單的預設提交行為
-          console.log("按鈕點擊事件已觸發");
-
-          // Google Apps Script 的 URL
-          const scriptURL = "https://script.google.com/macros/s/AKfycbw_eEP3ASghXdaZpfBTsgUYBt4MAWPTx06iBj_jIcMkV2LbCik7hiqxtC4awY4RTESllQ/exec";
-
-          // 收集表單資料
-          const data = {
-            name: document.getElementById('name').value,
-            line: document.getElementById('line').value,
-            phone: document.getElementById('phone').value,
-            am
-
+        try {
+          // 發送表單資料到 Google Apps Script
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
           });
+
+          const result = await response.json();
+          if (result.status === "success") {
+            document.getElementById('customForm').reset();
+            document.getElementById('thankYouMessage').style.display = "block";
+          } else {
+            console.error("提交失敗：", result.message);
+          }
+        } catch (error) {
+          console.error("提交表單時發生錯誤：", error);
+        }
+      });
+    }
   </script>
+
 
 
 
@@ -544,25 +526,25 @@
   </button>
 
   <script>
-        // 監聽滾動事件
-        window.onscroll = function () {
-          let scrollToTopButton = document.getElementById("scrollToTop");
-          // 當頁面滾動超過 300px 時顯示按鈕
-          if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollToTopButton.style.display = "block"; // 顯示按鈕
-          } else {
-            scrollToTopButton.style.display = "none"; // 隱藏按鈕
-          }
-        };
+    // 監聽滾動事件
+    window.onscroll = function () {
+      let scrollToTopButton = document.getElementById("scrollToTop");
+      // 當頁面滾動超過 300px 時顯示按鈕
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopButton.style.display = "block"; // 顯示按鈕
+      } else {
+        scrollToTopButton.style.display = "none"; // 隱藏按鈕
+      }
+    };
 
-        // 點擊返回頂端按鈕
-        document.getElementById("scrollToTop").onclick = function () {
-          // 滾動回頂端
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // 平滑滾動
-          });
-        };
+    // 點擊返回頂端按鈕
+    document.getElementById("scrollToTop").onclick = function () {
+      // 滾動回頂端
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滾動
+      });
+    };
   </script>
 
 
