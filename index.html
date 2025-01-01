@@ -207,7 +207,7 @@
           <!-- 姓名 -->
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
-            <input type="text" id="name" placeholder="例如：陳先生 or 張小姐"
+            <input type="text" id="name" placeholder="如：陳先生 or 張小姐"
               class="h-10 w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">
           </div>
 
@@ -330,7 +330,7 @@
   </div>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6mox10RSpFK17pwlNXxyOFTtSeR-7Y9i-hqO9pkaXjsGRbzBE6k7x3i2BcC1HAGez6w/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzh1CW2eIMkci1S96soEn0f7a2S5mwsaubKOhmlkpVVaxuB6tEQfolbNxf_aoqJSt2YIQ/exec';
     const form = document.getElementById('customForm');
     const submitButton = document.getElementById('submit-button');
     const thankYouMessage = document.getElementById('thankYouMessage');
@@ -356,16 +356,26 @@
           body: JSON.stringify(data),
         });
 
+        // 檢查回應是否成功
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         const result = await response.json();
+
+        // 根據伺服器回應的 status 顯示結果
         if (result.status === 'success') {
           form.reset(); // 重置表單
           thankYouMessage.style.display = 'block'; // 顯示感謝訊息
         } else {
           console.error('提交失敗:', result.message);
         }
+
       } catch (error) {
+        // 捕獲並顯示錯誤
         console.error('提交表單時發生錯誤:', error);
       }
+
     });
   </script>
 
