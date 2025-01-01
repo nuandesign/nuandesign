@@ -330,7 +330,7 @@
   </div>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzh1CW2eIMkci1S96soEn0f7a2S5mwsaubKOhmlkpVVaxuB6tEQfolbNxf_aoqJSt2YIQ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwn7wZDQW5m5FFbEB4Dgj5zNyxrwIHMt0l14mxVlYdB0M7ZB6Q-eYhj8oTvpVdxyHbmFQ/exec';
     const form = document.getElementById('customForm');
     const submitButton = document.getElementById('submit-button');
     const thankYouMessage = document.getElementById('thankYouMessage');
@@ -356,25 +356,17 @@
           body: JSON.stringify(data),
         });
 
-        // 檢查回應是否成功
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
         const result = await response.json();
-
-        // 根據伺服器回應的 status 顯示結果
         if (result.status === 'success') {
           form.reset(); // 重置表單
           thankYouMessage.style.display = 'block'; // 顯示感謝訊息
         } else {
           console.error('提交失敗:', result.message);
         }
-
       } catch (error) {
-        // 捕獲並顯示錯誤
         console.error('提交表單時發生錯誤:', error);
       }
+
 
     });
   </script>
