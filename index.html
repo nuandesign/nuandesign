@@ -204,8 +204,7 @@
     <div class="flex-1 bg-white shadow-lg rounded-xl p-8 relative w-full lg:max-w-lg">
       <h1 class="text-3xl font-bold text-primary mb-6 text-center">預約專屬服務</h1>
 
-      <!-- 修改為 GET 方法的表單 -->
-      <form action="https://script.google.com/macros/s/AKfycbw0QrEu_mzRDxOXM2xIdaCxpEjEPAK7XM8kqzQwI_Hh_80O_k0cklPapu046-SggeMC9w/exec" method="GET">
+      <form id="customForm">
         <!-- 姓名 -->
         <div class="mb-4">
           <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
@@ -231,7 +230,8 @@
         <div class="mb-4">
           <label for="amount" class="block text-gray-700 font-medium mb-2">資金需求</label>
           <div class="relative">
-            <select id="amount" name="amount" class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+            <select id="amount" name="amount"
+              class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
               <option value="選擇您的資金需求">選擇您的資金需求</option>
               <option value="50萬以下">50萬以下</option>
               <option value="50萬-100萬">50萬-100萬</option>
@@ -250,7 +250,8 @@
         <div class="mb-4">
           <label for="item" class="block text-gray-700 font-medium mb-2">諮詢項目</label>
           <div class="relative">
-            <select id="item" name="item" class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+            <select id="item" name="item"
+              class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
               <option value="選擇諮詢項目">選擇諮詢項目</option>
               <option value="二胎房貸">二胎房貸</option>
               <option value="信貸">信貸</option>
@@ -269,7 +270,8 @@
         <div class="mb-4">
           <label for="time" class="block text-gray-700 font-medium mb-2">聯絡時間</label>
           <div class="relative">
-            <select id="time" name="time" class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+            <select id="time" name="time"
+              class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
               <option value="選擇聯絡時間">選擇聯絡時間</option>
               <option value="全時段">全時段</option>
               <option value="上午">上午</option>
@@ -288,7 +290,8 @@
         <div class="mb-4">
           <label for="city" class="block text-gray-700 font-medium mb-2">所在縣市</label>
           <div class="relative">
-            <select id="city" name="city" class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
+            <select id="city" name="city"
+              class="appearance-none h-10 w-full p-2 pr-10 border rounded focus:ring-2 focus:ring-blue-400">
               <option value="選擇所在縣市">選擇所在縣市</option>
               <option value="台北市">台北市</option>
               <option value="新北市">新北市</option>
@@ -325,6 +328,44 @@
     </div>
   </div>
 </div>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw0QrEu_mzRDxOXM2xIdaCxpEjEPAK7XM8kqzQwI_Hh_80O_k0cklPapu046-SggeMC9w/exec';
+  const form = document.getElementById('customForm');
+
+  // 攔截表單提交
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // 防止表單預設行為（跳轉頁面）
+
+    // 收集表單資料
+    const data = {
+      name: document.getElementById('name').value,
+      line: document.getElementById('line').value,
+      phone: document.getElementById('phone').value,
+      amount: document.getElementById('amount').value,
+      item: document.getElementById('item').value,
+      time: document.getElementById('time').value,
+      city: document.getElementById('city').value,
+      license: document.getElementById('license').value,
+    };
+
+    try {
+      // 使用 fetch 發送 GET 請求
+      const response = await fetch(`${scriptURL}?${new URLSearchParams(data)}`, {
+        method: 'GET',
+      });
+
+      const result = await response.json();
+      if (result.status === 'success') {
+        form.reset(); // 重置表單
+        alert("感謝您的提交！我們已收到您的資訊。"); // 顯示彈出式感謝訊息
+      } else {
+        console.error('提交失敗:', result.message);
+      }
+    } catch (error) {
+      console.error('提交表單時發生錯誤:', error);
+    }
+  });
+</script>
 
 
 
